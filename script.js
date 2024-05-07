@@ -27,6 +27,27 @@ function getHumanChoice() {
     return humanChoiceLower;
 }
 
+function playRound(humanChoice, computerChoice) {
+    if (humanChoice == "rock" && computerChoice == "scissors") {
+        humanScore = humanScore + 1;
+        return console.log(`You win! ${humanChoice} beats ${computerChoice}!`);
+    }
+    else if (humanChoice == "paper" && computerChoice == "rock") {
+        humanScore = humanScore + 1;
+        return console.log(`You win! ${humanChoice} beats ${computerChoice}!`);
+    }
+    else if (humanChoice == "scissors" && computerChoice == "paper") {
+        humanScore = humanScore + 1;
+        return console.log(`You win! ${humanChoice} beats ${computerChoice}!`);
+    }
+    else if (humanChoice == computerChoice) {
+        return console.log("Tie! Try again!");
+    }
+    else {
+        computerScore = computerScore + 1;
+        return console.log(`You lose! ${computerChoice} beats ${humanChoice}!`);
+    }
+}
 
 
 
