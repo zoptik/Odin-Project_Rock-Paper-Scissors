@@ -1,3 +1,8 @@
+humanScore = 0;
+computerScore = 0;
+humanChoice = "";
+humanChoiceLower = "";
+
 function getComputerChoice() {
     computerChoice = Math.random();
 
@@ -12,6 +17,16 @@ function getComputerChoice() {
     }
 }
 
-function getHumanChoice(humanChoice = prompt("Choose your weapon: rock, paper, sciccors")) {
-    return humanChoice;
+function getHumanChoice() {
+    humanChoice = prompt("Choose your weapon: rock, paper, or scissors");
+    humanChoiceLower = humanChoice.toLowerCase();
+    while (humanChoiceLower !== "rock" && humanChoiceLower !== "paper" && humanChoiceLower !== "scissors") {
+        humanChoice = prompt("Please choose either rock, paper, or scissors");
+        humanChoiceLower = humanChoice.toLowerCase();
+    }
+    return humanChoiceLower;
 }
+
+
+
+
