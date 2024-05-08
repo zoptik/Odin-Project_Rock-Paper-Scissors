@@ -1,5 +1,3 @@
-humanScore = 0;
-computerScore = 0;
 humanChoice = "";
 humanChoiceLower = "";
 
@@ -49,5 +47,25 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
+function playGame() {
+
+    humanScore = 0;
+    computerScore = 0;
+
+    for (let i = 0; i < 5; i++) {
+        playRound(getHumanChoice(), getComputerChoice());
+    }
+    if (humanScore > computerScore) {
+        console.log(`You win! Your Score: ${humanScore} vs Computer Score: ${computerScore}`);
+    }
+    else if (humanScore == computerScore) {
+        console.log(`Tie game! Try again! Your Score: ${humanScore} vs Computer Score: ${computerScore}`);
+    }
+    else {
+        console.log(`You lose! Your Score: ${humanScore} vs Computer Score ${computerScore}`);
+    }
+}
+
+playGame();
 
 
